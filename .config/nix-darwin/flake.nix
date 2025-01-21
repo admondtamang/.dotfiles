@@ -14,6 +14,9 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs }:
     let
       configuration = { pkgs, ... }: {
+
+        # Fonts
+        fonts.packages = with pkgs; [ fira-code ];
         environment.systemPackages = with pkgs; [
 
           #Shells and editors
@@ -26,12 +29,14 @@
           #DEV
           nodejs_20
           bun
-          python3
+          python313
           git
           gh
           ngrok
           go
+          delve
           air
+          sqlc
 
           # Utilities
           doctl # digital ocean cli
@@ -41,10 +46,15 @@
           sshs # ssh client for terminal
           stow # symlink manager
           tree # directory tree
+          nmap # network scanner
+          php # php interpreter
+          wget # wget
 
           # NPM Tools
           nodePackages.serve
           nodePackages.yarn
+          nodePackages.ts-node
+          nodePackages.typescript
 
           # Hacking
           wpscan
@@ -145,16 +155,18 @@
             cleanup = "uninstall";
           };
           casks = [
-            "warp"
+            "warp" # terminal
             "raycast"
             "hoppscotch"
             "spotify"
             "firefox"
-            "ghostty"
             "whatsapp"
             "slack"
             "msty"
-            "caido"
+            "caido" # pentest tool
+            "chromium"
+            "dbeaver-community" # database tool
+            "linearmouse" # mouse tool
           ];
         };
 
