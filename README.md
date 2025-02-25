@@ -12,17 +12,10 @@ https://github.com/admondtamang/dotfiles/blob/main/.config/nix-darwin/flake.nix
 git clone https://github.com/admondtamang/dotfiles.git ~
 ```
 
-then install stow (stow is a symlink manager which hard links files to the current directory)
-
-```sh
-brew install stow
-stow .
-```
-
 install darwin-nix and use the following command to install all configurations
 
 ```sh
-darwin-rebuild switch --flake ~/.config/nix-darwin
+darwin-rebuild switch --flake ~/dotfiles/.config/nix-darwin
 ```
 
 ## Insights of this dotfiles
