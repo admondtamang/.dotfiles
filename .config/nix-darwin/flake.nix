@@ -1,6 +1,6 @@
 {
   ############### Overview ###############
-  # darwin-rebuild switch --flake ~/.config/nix-darwin
+  # darwin-rebuild switch --flake ~/dotfiles/.config/nix-darwin
   ###########################################
 
   description = "nix-darwin system flake";
@@ -9,11 +9,21 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
     let
       configuration = { pkgs, ... }: {
+
+        ############### Program configuration ###############
+        # Package level config
+        ###########################################
 
         # Fonts
         fonts.packages = with pkgs; [ fira-code ];
@@ -58,7 +68,6 @@
 
           # Hacking
           wpscan
-          metasploit
 
           # Nix
           nixfmt-classic
@@ -108,10 +117,14 @@
 
         };
 
+        ############### Mac configuration ###############
+        # System configuration
+        ###########################################
         environment.variables = { EDITOR = "vim"; };
 
         # touchid for sudo authentication
         security.pam.enableSudoTouchIdAuth = true;
+
 
         # docs: https://daiderd.com/nix-darwin/manual/index.html
         system.defaults = {
@@ -146,6 +159,10 @@
           screensaver.askForPasswordDelay = 10;
         };
 
+
+        ############### Homebrew ###############
+        # Packes for GUI application
+        ###########################################
         # Homebrew needs to be installed on its own!
         homebrew = {
           enable = true;
@@ -159,14 +176,13 @@
             "raycast"
             "hoppscotch"
             "spotify"
-            "firefox"
             "whatsapp"
             "slack"
-            "msty"
             "caido" # pentest tool
-            "chromium"
             "dbeaver-community" # database tool
             "linearmouse" # mouse tool
+            "vivaldi"
+            "cursor"
           ];
         };
 
