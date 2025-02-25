@@ -20,8 +20,7 @@ darwin-rebuild switch --flake ~/dotfiles/.config/nix-darwin
 
 ## Insights of this dotfiles
 
-- I use [nix-darwin](https://daiderd.com/nix-darwin/manual/index.html) to manage my system configurations
-- I use [stow](https://www.gnu.org/software/stow/) to manage symlinks
+- I am using [nix-darwin](https://daiderd.com/nix-darwin/manual/index.html) to manage my system configurations
 
 ## Packages
 
