@@ -1,7 +1,7 @@
 { ... }: {
 
   ############### Homebrew ###############
-  # Packes for GUI application
+  # Packages for GUI application
   ###########################################
   # Homebrew needs to be installed on its own!
   homebrew = {

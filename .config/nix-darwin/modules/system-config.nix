@@ -6,7 +6,7 @@
   environment.variables = { EDITOR = "vim"; };
 
   # touchid for sudo authentication
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   # docs: https://daiderd.com/nix-darwin/manual/index.html
   system.defaults = {

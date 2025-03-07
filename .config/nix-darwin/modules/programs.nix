@@ -26,7 +26,7 @@
     delve
     air
     sqlc
-
+    delta
     # Utilities
     doctl # digital ocean cli
     kubectl # kubernetes cli
@@ -75,7 +75,6 @@
       gph = "git push";
       gpl = "git pull";
       gco = "git checkout";
-      glog = "git log --oneline --graph --decorate";
       gd = "git diff";
 
       # Kubernetes aliases
