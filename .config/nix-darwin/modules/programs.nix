@@ -1,12 +1,15 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
+
+  home.username = "admondtamang";
+  home.homeDirectory = lib.mkForce "/Users/admondtamang";
 
   ############### Program configuration ###############
   # Package level config
   ###########################################
 
   # Fonts
-  fonts.packages = with pkgs; [ fira-code ];
-  environment.systemPackages = with pkgs; [
+  # fonts.packages = with pkgs; [ fira-code ];
+  home.packages = with pkgs; [
 
     #Shells and editors
     vim
@@ -94,5 +97,8 @@
     };
 
   };
+  home.stateVersion = "24.11";
+  home.sessionPath = [ "/run/current-system/sw/bin" "$HOME/.nix-profile/bin" ];
+  programs.home-manager.enable = true;
 
 }
