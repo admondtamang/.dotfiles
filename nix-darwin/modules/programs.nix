@@ -8,8 +8,10 @@
   ###########################################
 
   # Fonts
-  # fonts.packages = with pkgs; [ fira-code ];
+  fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
+    fira-code
 
     #Shells and editors
     vim

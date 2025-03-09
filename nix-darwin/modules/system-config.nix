@@ -21,7 +21,7 @@
     finder = {
       AppleShowAllExtensions = true;
       FXPreferredViewStyle = "clmv"; # column view
-      FXDefaultSearchScope = "SCcf"; # default fodler
+      FXDefaultSearchScope = "SCcf"; # default folder
       ShowPathbar = true;
     };
 

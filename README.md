@@ -4,7 +4,7 @@ The configurations are managed by nix-darwin. so you can use the following comma
 
 ## To get overview of whole configurations (Get a sneak peek)
 
-https://github.com/admondtamang/dotfiles/blob/main/.config/nix-darwin/flake.nix
+https://github.com/admondtamang/dotfiles/blob/main/nix-darwin/flake.nix
 
 ## Installation
 
