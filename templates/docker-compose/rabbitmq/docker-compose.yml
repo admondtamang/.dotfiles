@@ -1,0 +1,9 @@
+services:
+  rabbitmq:
+    container_name: rabbitmqq
+    image: rabbitmq:3-management
+    ports:
+      - 5672:5672
+      - 15672:15672
+    env_file:
+      - .env
