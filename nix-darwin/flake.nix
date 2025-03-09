@@ -1,6 +1,6 @@
 {
   ############### Overview ###############
-  # darwin-rebuild switch --flake ~/dotfiles/.config/nix-darwin
+  # darwin-rebuild switch --flake ~/dotfiles/nix-darwin
   ###########################################
 
   description = "nix-darwin system flake";

@@ -15,7 +15,7 @@ git clone https://github.com/admondtamang/dotfiles.git ~
 install darwin-nix and use the following command to install all configurations
 
 ```sh
-darwin-rebuild switch --flake ~/dotfiles/.config/nix-darwin
+darwin-rebuild switch --flake ~/dotfiles/nix-darwin
 ```
 
 ## Insights of this dotfiles

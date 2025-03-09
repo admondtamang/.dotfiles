@@ -17,6 +17,7 @@
     fish
     neovim
     eza
+    starship
 
     #DEV
     nodejs_20
@@ -57,6 +58,7 @@
 
   programs.fish = {
     enable = true;
+    shellInit = "starship init fish | source";
     shellAliases = {
       ls = "eza ";
       ll = "eza -l --color=always";
