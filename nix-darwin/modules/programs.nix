@@ -19,6 +19,7 @@
     fish
     neovim
     eza
+    thefuck
     starship
 
     #DEV
@@ -60,7 +61,10 @@
 
   programs.fish = {
     enable = true;
-    shellInit = "starship init fish | source";
+    shellInit = ''
+      starship init fish | source
+      thefuck --alias | source
+    '';
     shellAliases = {
       ls = "eza ";
       ll = "eza -l --color=always";

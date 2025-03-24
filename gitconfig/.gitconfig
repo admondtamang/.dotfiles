@@ -7,6 +7,9 @@
 
 [pull]
     ff = only
+    
+[push]
+    autoSetupRemote = true
 
 [core]
     pager = delta
