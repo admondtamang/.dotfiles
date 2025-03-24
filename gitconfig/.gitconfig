@@ -28,3 +28,4 @@
 
 [alias]
     lg = log --oneline --graph --decorate --all
+    lb = git branch --sort=-committerdate | head -n 1
