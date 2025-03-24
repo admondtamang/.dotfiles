@@ -1,32 +1,33 @@
 pkgs: {
   enable = true;
   shellAliases = {
-    sudo="sudo ";   # will now check for alias expansion after sudo
-    ls="exa ";
-    ll="exa -l --color=always";
-    la="exa -a --color=always";
-    lla="exa -al --color=always";
-    ".."="cd ..";
-    "..."="cd ../..";
-    "...."="cd ../../..";
-    ".2"="cd ../..";
-    ".3"="cd ../../..";
-    ".4"="cd ../../../..";
-    ".5"="cd ../../../../..";
-    ".6"="cd ../../../../../..";
-    bro="bitte rebuild --only";
-    g="git";
-    gco="git checkout";
-    gst="git status";
-    nfl="nix flake lock";
-    nflu="nix flake lock --update-input";
-    vimdiff="nvim -d";
-    vim="nvim";
-    vi="nvim";
-    opt=''manix "" | grep '^# ' | sed 's/^# \(.*\) (.*/\1/;s/ (.*//;s/^# //' | fzf --ansi --preview="manix '{}' | sed 's/type: /> type: /g' | bat -l Markdown --color=always --plain"'';
-    to32="nix-hash --to-base32 --type sha256";
+    sudo = "sudo "; # will now check for alias expansion after sudo
+    ls = "exa ";
+    ll = "exa -l --color=always";
+    la = "exa -a --color=always";
+    lla = "exa -al --color=always";
+    ".." = "cd ..";
+    "..." = "cd ../..";
+    "...." = "cd ../../..";
+    ".2" = "cd ../..";
+    ".3" = "cd ../../..";
+    ".4" = "cd ../../../..";
+    ".5" = "cd ../../../../..";
+    ".6" = "cd ../../../../../..";
+    bro = "bitte rebuild --only";
+    g = "git";
+    gco = "git checkout";
+    gst = "git status";
+    nfl = "nix flake lock";
+    nflu = "nix flake lock --update-input";
+    vimdiff = "nvim -d";
+    vim = "nvim";
+    vi = "nvim";
+    opt = ''
+      manix "" | grep '^# ' | sed 's/^# \(.*\) (.*/\1/;s/ (.*//;s/^# //' | fzf --ansi --preview="manix '{}' | sed 's/type: /> type: /g' | bat -l Markdown --color=always --plain"'';
+    to32 = "nix-hash --to-base32 --type sha256";
 
-    suspend="systemctl suspend";
+    suspend = "systemctl suspend";
   };
 
   initExtra = ''
