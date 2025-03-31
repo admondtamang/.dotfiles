@@ -10,7 +10,7 @@ spec:
   sources:
     - chart: nginx
       path: nginx
-      repoURL: "oci://registry-1.docker.io/bitnamicharts/nginx"
+      repoURL: "registry-1.docker.io/bitnamicharts"
       targetRevision: 19.x.x
       helm:
         values: |
