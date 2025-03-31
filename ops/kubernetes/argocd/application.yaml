@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/admondtamang/dotfiles.git
     targetRevision: HEAD
-    path: sourceoftruth
+    path: ops/kubernetes/argocd/apps
   destination:
     server: https://kubernetes.default.svc
     namespace: sourceoftruth

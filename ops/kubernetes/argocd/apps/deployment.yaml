@@ -22,9 +22,9 @@ spec:
     spec:
       containers:
         - name: go-server-deployment
-          image: edr3x/go-chi-server:v2
+          image: nginx:alpine
           ports:
-            - containerPort: 8080
+            - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
@@ -37,4 +37,4 @@ spec:
   ports:
     - protocol: TCP
       port: 8080
-      targetPort: 8080
+      targetPort: 80
