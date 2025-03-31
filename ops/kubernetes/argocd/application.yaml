@@ -12,3 +12,10 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: sourceoftruth
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
