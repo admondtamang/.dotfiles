@@ -3,7 +3,11 @@
   ############### Mac configuration ###############
   # System configuration
   ###########################################
-  environment.variables = { EDITOR = "vim"; };
+  environment.variables = {
+    EDITOR = "vim";
+    KUBECONFIG = "~/.kube/config-k3s";
+
+  };
 
   # touchid for sudo authentication
   security.pam.services.sudo_local.touchIdAuth = true;

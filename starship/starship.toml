@@ -1,66 +1,124 @@
-add_newline = false
-# A minimal left prompt
-format = """$directory$character"""
-palette = "catppuccin_mocha"
-# move the rest of the prompt to the right
-right_format = """$all"""
-command_timeout = 1000
+"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = true
+
+right_format = """$git_metrics$memory_usage$time"""
+
+[battery]
+charging_symbol = ' '
+discharging_symbol = '󰂁 '
+
+[[battery.display]]
+threshold = 30
 
 [character]
-vicmd_symbol = "[N] >>>"
-success_symbol = '[➜](bold green)'
+error_symbol = "[✖](#FF0000) "
+success_symbol = "[❯](#00FF00)" 
 
-[directory.substitutions]
-'~/tests/starship-custom' = 'work-project'
+[cmd_duration]
+format = " took [$duration]($style)"
+min_time = 10
+
+[directory]
+truncation_length = 3
+read_only = " "
+format = "[$path]($style)[$lock_symbol]($lock_style) "
 
 [git_branch]
-format =  '[$symbol$branch(:$remote_branch)]($style)'
+format = " [$symbol$branch]($style) "
+symbol = " "
+style = "#FFFF00"
+
+[git_commit]
+commit_hash_length = 8
+style = "bright white"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "⇡ ×${count} "
+behind = "⇣ ×${count} "
+diverged = "⇕ ×${ahead_count}  ×${behind_count} "
+untracked = " ×${count} "
+stashed = " 📦 "
+modified = "! ×${count} "
+staged = " ×${count} "
+renamed = " ×${count} "
+deleted = "✘ ×${count} "
+style = "bright-white"
+format = "$all_status$ahead_behind"
+
+[git_metrics]
+disabled = false
+
+[hostname]
+ssh_only = false
+format = " [$hostname]($style) "
+trim_at = "-"
+style = "#A020F0"
+disabled = true
+
+[memory_usage]
+format = "$symbol[${ram}(  )]($style) "
+threshold = 40
+symbol = "  "
+style = "#6ba4cf"
+disabled = false
+
+[username]
+disabled = true
+style_user = "#00FF00"
+format = "[$user]($style) @"
+show_always = true
+
+[time]
+disabled = false
+format = '[\[ $time \]]($style) '
+time_format = '%I:%M %p'
+
+[package]
+disabled = true
 
 [aws]
-format = '[$symbol(profile: "$profile" )(\(region: $region\) )]($style)'
-disabled = false
-style = 'bold blue'
-symbol = " "
-
-[golang]
-format = '[ ](bold cyan)'
+symbol = "  "
 
 [kubernetes]
-symbol = '☸ '
-disabled = true
-detect_files = ['Dockerfile']
-format = '[$symbol$context( \($namespace\))]($style) '
-contexts = [
-  { context_pattern = "arn:aws:eks:us-west-2:577926974532:cluster/zd-pvc-omer", style = "green", context_alias = "omerxx", symbol = " " },
-]
+format = '[󱃾 $context \($namespace\)](#7dfa94) '
+disabled = false
+
+[c]
+symbol = " "
+
+[dart]
+symbol = " "
 
 [docker_context]
-disabled = true
+symbol = " "
 
-[palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[terraform]
+symbol = "󱁢 "

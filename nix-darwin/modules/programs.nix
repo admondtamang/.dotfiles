@@ -39,13 +39,15 @@
     kubectl # kubernetes cli
     kubernetes-helm # kubernetes package manager
     datree # kubernetes security scanner
+    fzf
     sshs # ssh client for terminal
     stow # symlink manager
     tree # directory tree
     nmap # network scanner
     php # php interpreter
     wget # wget
-
+    nuclei
+    kubectx
     # NPM Tools
     nodePackages.serve
     nodePackages.yarn
@@ -64,6 +66,7 @@
     shellInit = ''
       starship init fish | source
       thefuck --alias | source
+      set -gx KUBECONFIG "/Users/admondtamang/.kube/config" | source
     '';
     shellAliases = {
       ls = "eza ";
@@ -95,6 +98,11 @@
       kg = "kubectl get";
       kl = "kubectl logs";
       kx = "kubectl exec -it";
+      # kubernetes
+      kns =
+        "kubens | fzf --prompt='Select namespace: ' --height=~50% --layout=reverse --border | xargs kubens"; # list all namespace
+      kctx =
+        "kubectx | fzf --prompt='Select context: ' --height=~50% --layout=reverse --border | xargs kubectx"; # select namespace
 
       v = "vim";
       vim = "nvim";
@@ -108,5 +116,4 @@
   home.stateVersion = "24.11";
   home.sessionPath = [ "/run/current-system/sw/bin" "$HOME/.nix-profile/bin" ];
   programs.home-manager.enable = true;
-
 }
