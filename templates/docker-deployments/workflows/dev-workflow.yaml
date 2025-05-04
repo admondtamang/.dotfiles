@@ -1,0 +1,19 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  publish:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v2.0.2
+        with:
+            envkey_NEXT_PUBLIC_BASE_URL: ${{ secrets.DEV_NEXT_PUBLIC_BASE_URL }}
+      - name: Build docker images
+        run: docker build -t axp-web:dev --target=runner .
+      - name: Deploy
+        run: /home/ubuntu/dev_app/deploy-front.sh

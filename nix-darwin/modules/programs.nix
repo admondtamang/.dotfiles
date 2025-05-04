@@ -34,6 +34,8 @@
     air
     sqlc
     delta
+    mariadb
+
     # Utilities
     doctl # digital ocean cli
     kubectl # kubernetes cli
@@ -98,6 +100,14 @@
       kg = "kubectl get";
       kl = "kubectl logs";
       kx = "kubectl exec -it";
+
+      # change ownership of file to oneself
+      own = "sudo chown $(id -u):$(id -g)";
+
+      # NPM aliases
+      npm = "bunx";
+      npx = "bunx";
+
       # kubernetes
       kns =
         "kubens | fzf --prompt='Select namespace: ' --height=~50% --layout=reverse --border | xargs kubens"; # list all namespace

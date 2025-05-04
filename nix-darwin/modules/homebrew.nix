@@ -22,7 +22,7 @@
       "dbeaver-community" # database tool
       "linearmouse" # mouse tool
       "vivaldi"
-      "cursor"
+      "derailed/k9s/k9sE"
     ];
   };
 }

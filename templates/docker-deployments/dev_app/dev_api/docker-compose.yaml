@@ -1,0 +1,20 @@
+version: "3.9"
+networks:
+  app:
+    external: true
+
+services:
+  dev_api:
+    image: "axp-backend:dev"
+    restart: always
+    env_file:
+      - ./.env
+    networks:
+      - app
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.services.dev-api.loadbalancer.server.port=8080"
+      - "traefik.http.services.dev-api.loadbalancer.server.scheme=http"
+      - "traefik.http.routers.dev-api.entrypoints=websecure"
+      - "traefik.http.routers.dev-api.tls.certresolver=production"
+      - "traefik.http.routers.dev-api.rule=Host(`dev-api.admondtamang.com.np`)"
