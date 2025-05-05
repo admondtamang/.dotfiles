@@ -1,0 +1,27 @@
+{
+  "Version": "2008-10-17",
+  "Id": "PolicyForCloudFrontPrivateContent",
+  "Statement": [
+    {
+      "Sid": "AddPerm",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::admondtamang/*"
+    },
+    {
+      "Sid": "AllowCloudFrontServicePrincipal",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "cloudfront.amazonaws.com"
+      },
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::admondtamang/*",
+      "Condition": {
+        "StringEquals": {
+          "AWS:SourceArn": "arn:aws:cloudfront::443134267736:distribution/EHHWOL5RLX7HD"
+        }
+      }
+    }
+  ]
+}

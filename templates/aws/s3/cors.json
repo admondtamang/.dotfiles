@@ -1,0 +1,12 @@
+[
+  {
+    "AllowedHeaders": ["*"],
+    "AllowedMethods": ["GET", "POST", "PUT", "HEAD", "DELETE"],
+    "AllowedOrigins": [
+      "http://localhost:3000",
+      "http://localhost:3001",
+      "https://*.admondtamang.com.np"
+    ],
+    "ExposeHeaders": ["ETag"]
+  }
+]
