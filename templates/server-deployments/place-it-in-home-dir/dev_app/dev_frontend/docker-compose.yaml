@@ -5,7 +5,7 @@ networks:
 
 services:
   dev_web:
-    image: "axp-web:dev"
+    image: "web:dev"
     restart: always
     networks:
       - app
