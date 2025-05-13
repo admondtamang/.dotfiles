@@ -5,7 +5,7 @@ networks:
 
 services:
   dev_api:
-    image: "axp-backend:dev"
+    image: "backend:dev"
     restart: always
     env_file:
       - ./.env
