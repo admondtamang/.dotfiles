@@ -14,6 +14,6 @@ jobs:
         with:
             envkey_NEXT_PUBLIC_BASE_URL: ${{ secrets.DEV_NEXT_PUBLIC_BASE_URL }}
       - name: Build docker images
-        run: docker build -t axp-web:dev --target=runner .
+        run: docker build -t web:dev --target=runner .
       - name: Deploy
         run: /home/ubuntu/dev_app/deploy-front.sh
