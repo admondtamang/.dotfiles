@@ -21,6 +21,7 @@
     eza
     thefuck
     starship
+    tmux
 
     #DEV
     nodejs_20
@@ -39,6 +40,7 @@
     # Utilities
     doctl # digital ocean cli
     kubectl # kubernetes cli
+    k9s
     kubernetes-helm # kubernetes package manager
     datree # kubernetes security scanner
     fzf
@@ -69,6 +71,7 @@
       starship init fish | source
       thefuck --alias | source
       set -gx KUBECONFIG "/Users/admondtamang/.kube/config" | source
+      set fish_greeting
     '';
     shellAliases = {
       ls = "eza ";
