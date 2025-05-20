@@ -22,6 +22,7 @@
       "dbeaver-community" # database tool
       "linearmouse" # mouse tool
       "vivaldi"
+      # "kitty" 
     ];
   };
 }

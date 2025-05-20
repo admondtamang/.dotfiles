@@ -65,67 +65,6 @@
     nixfmt-classic
   ];
 
-  programs.fish = {
-    enable = true;
-    shellInit = ''
-      starship init fish | source
-      thefuck --alias | source
-      set -gx KUBECONFIG "/Users/admondtamang/.kube/config" | source
-      set fish_greeting
-    '';
-    shellAliases = {
-      ls = "eza ";
-      ll = "eza -l --color=always";
-      la = "eza -a --color=always";
-      lla = "eza -al --color=always";
-      ".." = "cd ..";
-      "..." = "cd ../..";
-      "...." = "cd ../../..";
-      ".2" = "cd ../..";
-      ".3" = "cd ../../..";
-      ".4" = "cd ../../../..";
-      ".5" = "cd ../../../../..";
-      ".6" = "cd ../../../../../..";
-
-      # Git aliases
-      gs = "git status";
-      ga = "git add";
-      gc = "git commit";
-      gph = "git push";
-      gpl = "git pull";
-      gco = "git checkout";
-      gd = "git diff";
-
-      # Kubernetes aliases
-      k = "kubectl";
-      ka = "kubectl apply";
-      kd = "kubectl describe";
-      kg = "kubectl get";
-      kl = "kubectl logs";
-      kx = "kubectl exec -it";
-
-      # change ownership of file to oneself
-      own = "sudo chown $(id -u):$(id -g)";
-
-      # NPM aliases
-      npm = "bunx";
-      npx = "bunx";
-
-      # kubernetes
-      kns =
-        "kubens | fzf --prompt='Select namespace: ' --height=~50% --layout=reverse --border | xargs kubens"; # list all namespace
-      kctx =
-        "kubectx | fzf --prompt='Select context: ' --height=~50% --layout=reverse --border | xargs kubectx"; # select namespace
-
-      v = "vim";
-      vim = "nvim";
-      vi = "nvim";
-      vimdiff = "nvim -d";
-
-      suspend = "systemctl suspend";
-    };
-
-  };
   home.stateVersion = "24.11";
   home.sessionPath = [ "/run/current-system/sw/bin" "$HOME/.nix-profile/bin" ];
   programs.home-manager.enable = true;
