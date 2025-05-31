@@ -2,7 +2,7 @@
 
 cd /home/ubuntu/dev_app/dev_frontend
 
-#docker compose up --build --detach --remove-orphans --scale dev_web=1
+#docker compose up --build --detach --remove-orphans --scale app-dev=1
 
 echo "hello"
 
