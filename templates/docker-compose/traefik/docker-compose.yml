@@ -1,8 +1,11 @@
-version: "3.3"
+networks:
+  app:
+    external: true
 
 services:
+
   traefik:
-    image: "traefik:v3.3"
+    image: "traefik:v3.4"
     container_name: "traefik"
     command:
       #- "--log.level=DEBUG"
@@ -10,8 +13,18 @@ services:
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entryPoints.web.address=:80"
+      - "--entryPoints.websecure.address=:443"
+      - "--certificatesresolvers.production.acme.httpchallenge=true"
+      - "--certificatesresolvers.production.acme.httpchallenge.entrypoint=web"
+      #- "--certificatesresolvers.production.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
+      - "--certificatesresolvers.production.acme.email=admondtamang@gmail.com"
+      - "--certificatesresolvers.production.acme.storage=/letsencrypt/acme.json"
     ports:
       - "80:80"
+      - "443:443"
       - "8080:8080"
     volumes:
+      - "./letsencrypt:/letsencrypt"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    networks:
+      - app
