@@ -3,7 +3,7 @@ networks:
     external: true
 
 services:
-  web:
+  app-dev:
     image: "app-web:dev"
     restart: always
     networks:
