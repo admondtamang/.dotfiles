@@ -14,6 +14,6 @@ jobs:
         with:
             envkey_NEXT_PUBLIC_BASE_URL: ${{ secrets.PROD_NEXT_PUBLIC_BASE_URL }}
       - name: Build docker images
-        run: docker build -t web:prod --target=runner .
+        run: docker build -t app-web:prod --target=runner .
       - name: Deploy
         run: /home/ubuntu/prod_app/deploy-front.sh
