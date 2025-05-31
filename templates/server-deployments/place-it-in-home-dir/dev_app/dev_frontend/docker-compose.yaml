@@ -1,18 +1,16 @@
-version: "3.9"
 networks:
   app:
     external: true
 
 services:
-  dev_web:
-    image: "web:dev"
+  web:
+    image: "app-web:dev"
     restart: always
     networks:
       - app
     labels:
       - "traefik.enable=true"
-      - "traefik.http.services.dev-web.loadbalancer.server.port=3000"
-      - "traefik.http.services.dev-web.loadbalancer.server.scheme=http"
-      - "traefik.http.routers.dev-web.entrypoints=websecure"
-      - "traefik.http.routers.dev-web.tls.certresolver=production"
-      - "traefik.http.routers.dev-web.rule=Host(`dev-app.admondtamang.com.np`)"
+      - "traefik.http.services.web.loadbalancer.server.port=3000"
+      - "traefik.http.routers.web.entrypoints=websecure"
+      - "traefik.http.routers.web.tls.certresolver=production"
+      - "traefik.http.routers.web.rule=Host(`dev.admondtamang.com.np`)"
