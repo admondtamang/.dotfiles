@@ -8,7 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $from_name  = trim($_POST['from_name']);
 
     // Create a properly formatted formal message
-    $formatted_message = "Dear Recipient,\n\n";
     $formatted_message .= $message . "\n\n";
 
     $headers  = "From: $from_name <$from_email>\r\n";
