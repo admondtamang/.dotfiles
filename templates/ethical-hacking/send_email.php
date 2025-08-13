@@ -242,17 +242,7 @@ function updatePreview() {
     document.getElementById('preview-subject').textContent = subject;
     
     // Update email body
-    const formattedBody = `Dear Recipient,
-
-${message}
-
-Best regards,
-${fromName}
-${fromEmail}
-
----
-This email was sent via automated system.
-Date: <?php echo date('Y-m-d H:i:s'); ?>`;
+    const formattedBody = message;
     
     document.getElementById('preview-body').textContent = formattedBody;
 }
