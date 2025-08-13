@@ -3,10 +3,10 @@ networks:
     external: true
 
 services:
-
   traefik:
     image: "traefik:v3.4"
     container_name: "traefik"
+    restart: always
     command:
       #- "--log.level=DEBUG"
       - "--api.insecure=true"
@@ -19,12 +19,24 @@ services:
       #- "--certificatesresolvers.production.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
       - "--certificatesresolvers.production.acme.email=admondtamang@gmail.com"
       - "--certificatesresolvers.production.acme.storage=/letsencrypt/acme.json"
+      # redirect http to https
+      - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+
     ports:
       - "80:80"
       - "443:443"
-      - "8080:8080"
+      # - "8080:8080"
     volumes:
       - "./letsencrypt:/letsencrypt"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
     networks:
       - app
+  # whoami:
+  #   image: "traefik/whoami"
+  #   container_name: "simple-service"
+  #   labels:
+  #     - "traefik.enable=true"
+  #     - "traefik.http.routers.whoami.rule=Host(`whoami.ird.com.np`)"
+  #     - "traefik.http.routers.whoami.entrypoints=websecure"
+  #     - "traefik.http.routers.whoami.tls.certresolver=production"
