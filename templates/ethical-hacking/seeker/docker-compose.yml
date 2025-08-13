@@ -1,0 +1,27 @@
+services:
+  seeker:
+    image: thewhiteh4t/seeker
+    container_name: seeker
+    tty: true
+    stdin_open: true
+    restart: always
+    volumes:
+      - seeker-db:/seeker/db
+    networks:
+      - app
+    environment:
+      - TEMPLATE=1
+      - REDIRECT=https://drive.google.com/drive/folders/1VpXURPZPgKefaEP-jmtBi7dAY9B1RfMg
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.seeker.entrypoints=websecure"
+      - "traefik.http.routers.seeker.tls.certresolver=production"
+      - "traefik.http.routers.seeker.rule=Host(`google-photos.your-url.com`)"
+
+networks:
+  app:
+    external: true
+
+volumes:
+  seeker-db:
+
