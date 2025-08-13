@@ -5,16 +5,20 @@ services:
     tty: true
     stdin_open: true
     restart: always
+    volumes:
+      - ./seeker/db:/root/seeker/db
     networks:
       - app
     environment:
       - TEMPLATE=1
       - REDIRECT=https://drive.google.com/drive/folders/1VpXURPZPgKefaEP-jmtBi7dAY9B1RfMg
+    ports:
+      - "8080:8080"
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.seeker.entrypoints=websecure"
       - "traefik.http.routers.seeker.tls.certresolver=production"
-      - "traefik.http.routers.seeker.rule=Host(`google-photos.your-url.com`)"
+      - "traefik.http.routers.seeker.rule=Host(`google-photos.ird.com.np`)"
 
 networks:
   app:
