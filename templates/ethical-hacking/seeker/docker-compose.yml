@@ -10,6 +10,7 @@ services:
     networks:
       - app
     environment:
+      # select google drive template and save redirect url or use docker exec -it seeker bash and run ./seeker.sh
       - TEMPLATE=1
       - REDIRECT=https://drive.google.com/drive/folders/1VpXURPZPgKefaEP-jmtBi7dAY9B1RfMg
     ports:
