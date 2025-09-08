@@ -22,9 +22,10 @@
     thefuck
     starship
     tmux
+    ripgrep
 
     #DEV
-    nodejs_20
+    nodejs_22
     bun
     python313
     git
@@ -51,12 +52,13 @@
     php # php interpreter
     wget # wget
     nuclei
-    kubectx
+    kubectx        
+
     # NPM Tools
     nodePackages.serve
-    nodePackages.yarn
     nodePackages.ts-node
     nodePackages.typescript
+    nodePackages.npm
 
     # Hacking
     wpscan

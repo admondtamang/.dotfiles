@@ -33,6 +33,7 @@ pkgs: {
   initExtra = ''
     set -o vi  # enable vi-like control
     export EDITOR=nvim
+    export PATH="/Users/admondtamang/.bun/bin:$PATH"
 
     # not sure why this stopped working, but it's annoying
     git_prompt_path=${pkgs.git}/share/bash-completion/completions/git-prompt.sh
