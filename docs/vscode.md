@@ -2,21 +2,23 @@
 
 # Font
 
-* [Anonymous Pro](https://www.marksimonson.com/fonts/view/anonymous-pro)
+- [Anonymous Pro](https://www.marksimonson.com/fonts/view/anonymous-pro)
 
 ## Themes/Color
 
-* [Just Black](https://marketplace.visualstudio.com/items?itemName=nur.just-black)
-  * See [`editor.tokenColorCustomizations`](#settings) in my VS Code settings for a few modifications I make to the theme.
-
+- [Just Black](https://marketplace.visualstudio.com/items?itemName=nur.just-black)
+  - See [`editor.tokenColorCustomizations`](#settings) in my VS Code settings for a few modifications I make to the theme.
 
 ## Enable the code Command in PATH
+
 Open Visual Studio Code.
 Open the Command Palette: Press Ctrl + Shift + P (or Cmd + Shift + P on macOS).
 Type and Select: Shell Command: Install 'code' command in PATH.
 
-### Extension package names for easy install 
+### Extension package names for easy install
+
 #### swift install
+
 ```
 https://gist.githubusercontent.com/admondtamang/5020ddc261ecd5e172aeb21a52730d61/raw/extension.txt
 
@@ -31,8 +33,8 @@ curl -s https://gist.githubusercontent.com/admondtamang/5020ddc261ecd5e172aeb21a
 
 ```
 
-
 windows
+
 ```
 # Update settings.json
 Invoke-WebRequest -Uri https://gist.githubusercontent.com/admondtamang/5020ddc261ecd5e172aeb21a52730d61/raw/213f5264a755e16ee99399ec3dc6bfd90f1ea8e1/settings.json -OutFile "$env:APPDATA\Code\User\settings.json"
@@ -46,6 +48,7 @@ Invoke-WebRequest -Uri https://gist.githubusercontent.com/admondtamang/5020ddc26
 OR
 
 #### Another method: copy the below extenstions and create a file name extensions.txt and execute following command:
+
 ```
 cat extensions.txt | xargs -L1 code --install-extension
 ```
@@ -216,11 +219,11 @@ streetsidesoftware.code-spell-checker
     "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js"
   ],
   "apc.electron": {
-    "opacity": 0.90,
+    "opacity": 0.9,
     "transparent": true,
     "backgroundColor": "#00000000",
     "vibrancy": "ultra-dark"
-},
+  }
   // "workbench.colorTheme": "Transparent Color Theme"
 }
 ```
@@ -370,7 +373,7 @@ streetsidesoftware.code-spell-checker
 
 ## Past Themes
 
-* Original theme I use in some videos:
-  * [Seti-Monokai](https://marketplace.visualstudio.com/items?itemName=SmukkeKim.theme-setimonokai)
-* I used this darker modification of the above theme for a few videos:
-  * [Seti-Black](https://marketplace.visualstudio.com/items?itemName=bobsparadox.seti-black)
+- Original theme I use in some videos:
+  - [Seti-Monokai](https://marketplace.visualstudio.com/items?itemName=SmukkeKim.theme-setimonokai)
+- I used this darker modification of the above theme for a few videos:
+  - [Seti-Black](https://marketplace.visualstudio.com/items?itemName=bobsparadox.seti-black)

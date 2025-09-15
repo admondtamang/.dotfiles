@@ -10,6 +10,9 @@ thefuck --alias | source
 # Set KUBECONFIG environment variable
 set -gx KUBECONFIG "/Users/admondtamang/.kube/config"
 
+# set bun path
+export PATH="/Users/admondtamang/.bun/bin:$PATH"
+
 # Disable default greeting
 set fish_greeting
 

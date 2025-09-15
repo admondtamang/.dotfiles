@@ -1,4 +1,8 @@
---target=~/.config
+--target=~
 --ignore=.stowrc
 --ignore=DS_Store
 --ignore=templates
+--ignore=docs
+--ignore=scripts
+--ignore=README.md
+--ignore=setup.sh

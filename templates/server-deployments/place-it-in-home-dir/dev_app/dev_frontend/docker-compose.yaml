@@ -10,7 +10,7 @@ services:
       - app
     labels:
       - "traefik.enable=true"
-      - "traefik.http.services.app-web.loadbalancer.server.port=3000"
-      - "traefik.http.routers.app-web.entrypoints=websecure"
-      - "traefik.http.routers.app-web.tls.certresolver=production"
-      - "traefik.http.routers.app-web.rule=Host(`dev.admondtamang.com.np`)"
+      - "traefik.http.services.app-dev.loadbalancer.server.port=3000"
+      - "traefik.http.routers.app-dev.entrypoints=websecure"
+      - "traefik.http.routers.app-dev.tls.certresolver=production"
+      - "traefik.http.routers.app-dev.rule=Host(`dev.admondtamang.com.np`)"
