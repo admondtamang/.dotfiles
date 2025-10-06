@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# wget https://raw.githubusercontent.com/admondtamang/.dotfiles/refs/heads/main/templates/server-deployments/bootstrap.sh; chmod +x bootstrap.sh
+
 # Fun ASCII header
 echo "🌟 Welcome to the Bootstrap Template Installer 🌟"
 echo "      _____      _            _       _       _             "
