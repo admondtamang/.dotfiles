@@ -26,3 +26,13 @@ darwin-rebuild switch --flake ~/projects/_personal/dotfiles/nix-darwin
 
 GUI apps are installed using [homebrew](https://brew.sh/)
 CLI apps are installed using [nix](https://nixos.org/manual/nix/stable/)
+
+# STOW
+Run stow to symlink everything or just select what you want
+
+```
+stow */  # For Everything
+```
+```
+stow nvim # Only nvim config
+```

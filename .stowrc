@@ -4,8 +4,6 @@
 --ignore=README.md
 --ignore=setup.sh
 --ignore='^templates/'
-
---ignore=nvim
 --ignore=fish
 --ignore=kitty
 --ignore=nix
