@@ -1,8 +1,12 @@
---target=~
 --ignore=.stowrc
 --ignore=DS_Store
---ignore=templates
 --ignore=docs
---ignore=scripts
 --ignore=README.md
 --ignore=setup.sh
+--ignore='^templates/'
+
+--ignore=nvim
+--ignore=fish
+--ignore=kitty
+--ignore=nix
+--ignore=nix-darwin
