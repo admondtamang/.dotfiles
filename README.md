@@ -62,7 +62,8 @@ stow -D nvim # Remove nivm config
 | tunnel - ngrok alternative - pinggy | [https://tunnelmole.com/](https://pinggy.io) |
 
 ## Movies
-
-| https://yflix.to/home | yflix |
-| https://net20.cc/login2 | net20 |
+| Site | URL |
+| --- | --- |
+| yflix | https://yflix.to/home |
+| net20 | https://net20.cc/login2 |
 
