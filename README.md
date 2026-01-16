@@ -46,4 +46,39 @@ stow nvim # Only nvim config
 stow -D . # Remove everything
 stow -D nvim # Remove nivm config
 ```
+
+# Useful sites
+
+| Task | URL |
+| --- | --- |
+| compress | https://www.iloveimg.com/ |
+| favicon generator | https://favicon.io/ |
+| table to csv and more conversion | https://tableconvert.com/ |
+| purchase domain | https://porkbun.com/ |
+| a fake SMTP service | https://ethereal.email |
+|Ventory: for creating bootable disk | https://www.ventoy.net/en/index.html|
+| Temporary phone number | https://temp-number.com|
+| Docuseal | https://www.docuseal.com |
+| tunnel - ngrok alternative - pinggy | [https://tunnelmole.com/](https://pinggy.io) |
+
+
+# Packages for doing shits
+
+| Task | Package | site |
+| --- | --- | --- |
+| framework | Nextjs,Vite |  |
+| alert | Sonner |  |
+| api | axios with tankstack react query |  |
+| form | react hook form with zod |  |
+| table | tankstack react table |  |
+| Global state manager | zustand |  |
+| ui | shadcn |  |
+| charts | recharts |  |
+| Carousel | swiper | https://swiperjs.com/react |
+| animation | framer motion |  |
+| date and time | date-fns |  |
+| markdown editor | react-quill |  |
+| next js router events | nextjs-router-events | https://github.com/run4w4y/nextjs-router-events|
+
+```
 ```
