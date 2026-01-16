@@ -61,24 +61,8 @@ stow -D nvim # Remove nivm config
 | Docuseal | https://www.docuseal.com |
 | tunnel - ngrok alternative - pinggy | [https://tunnelmole.com/](https://pinggy.io) |
 
+## Movies
 
-# Packages for doing shits
+| https://yflix.to/home | yflix |
+| https://net20.cc/login2 | net20 |
 
-| Task | Package | site |
-| --- | --- | --- |
-| framework | Nextjs,Vite |  |
-| alert | Sonner |  |
-| api | axios with tankstack react query |  |
-| form | react hook form with zod |  |
-| table | tankstack react table |  |
-| Global state manager | zustand |  |
-| ui | shadcn |  |
-| charts | recharts |  |
-| Carousel | swiper | https://swiperjs.com/react |
-| animation | framer motion |  |
-| date and time | date-fns |  |
-| markdown editor | react-quill |  |
-| next js router events | nextjs-router-events | https://github.com/run4w4y/nextjs-router-events|
-
-```
-```
