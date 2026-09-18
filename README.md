@@ -66,4 +66,5 @@ stow -D nvim # Remove nivm config
 | --- | --- |
 | yflix | https://yflix.to/home |
 | net20 | https://net20.cc/login2 |
+| dulo | https://dulo.sx/ |
 
