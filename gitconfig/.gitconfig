@@ -1,5 +1,5 @@
 [user]
-	name = admond tamang
+	name = Admond
 	email = admondtamang@gmail.com
 
 [init]
@@ -33,3 +33,5 @@
 [alias]
     lg = log --oneline --graph --decorate --all
 	lb = !git branch --sort=-committerdate | head -n 5
+[safe]
+	directory = *

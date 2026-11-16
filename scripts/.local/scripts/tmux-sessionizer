@@ -3,11 +3,12 @@
 if [[ $# -eq 1 ]]; then
   selected=$1
 else
-  selected=$(find \
+  selected=$((find \
     ~/Work/oneaccord \
     ~/Work/success \
     ~/Work/personal \
-    -mindepth 1 -maxdepth 1 -type d | fzf --prompt="Select project: " --height=~80% --layout=reverse --border --exit-0)
+    ~/Work/playground \
+    -mindepth 1 -maxdepth 1 -type d; echo ~/.dotfiles; echo ~/Notes; echo ~/Work/ops)  | fzf --prompt="Select project: " --height=~80% --layout=reverse --border --exit-0)
 fi
 
 if [[ -z $selected ]]; then
